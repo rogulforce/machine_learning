@@ -9,9 +9,10 @@ import matplotlib.pyplot as plt
 
 class LinearRegr:
     """ Linear Regression model from scratch.
-    Y = w_0 + w_1*x_1 + ... + w_m*x_m
-    params:
-        weight (np.array): weights vector. weight = (w_0, w_1, ..., w_m)"""
+    y = w_0 + w_1*x_1 + ... + w_m*x_m
+    Attributes:
+        self.weight (np.array): weights vector. weight = (w_0, w_1, ..., w_m)
+    """
     weight = np.array([])
 
     def fit(self, x: np.array, y: np.array, learning_rate: float = 0.002, max_iter: int = 100000):
@@ -28,7 +29,7 @@ class LinearRegr:
         self.weight = np.append(np.array([b]), w)
         return self
 
-    def predict(self, x):
+    def predict(self, x: np.array):
         """ Find weight vector minimizing quadratic loss function <self._cost> using <self._gradient_descent> method.
         Args:
             x (np.array[n,m]): n m-dimensional samples of parameters

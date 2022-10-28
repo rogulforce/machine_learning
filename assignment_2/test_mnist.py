@@ -93,4 +93,4 @@ def test_mnist(epochs: int, learning_rate: float, train_len: int, test_len: int,
 
 
 if __name__ == "__main__":
-    test_mnist(epochs=30, learning_rate=0.1, train_len=1000, test_len=10, layer_size=[100, 50])
+    test_mnist(epochs=30, learning_rate=0.1, train_len=1000, test_len=10, layer_size=[50, 50, 30])
